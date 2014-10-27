@@ -1,0 +1,19 @@
+{
+    "project1_91": [{
+        "description": "replace_the_nav",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*haibao_header\\.html.*-->",
+        "replacement": "{#nav#}"
+    }, {
+        "description": "replace_the_source",
+        "replace_regexp_pattern": "<\\/head>",
+        "replacement": "{#source#}</head>"
+    }, {
+        "description": "replace_the_bottom",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*haibao_newfooter\\.html.*-->",
+        "replacement": "{#bottom#}"
+    }, {
+        "description": "replace_the_guestbook",
+        "replace_regexp_pattern": "<script>.*document\\.write.*decodeURI.*800\\.91jmw\\.com.*<\\/script>",
+        "replacement": "{#guestbook#}"
+    }]
+}

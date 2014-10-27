@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.section{position:relative;}
+
+.wz_1{width:698px;position:absolute;right:0;top:0;}
+.txt_1{font-size:18px;line-height:43px;color:#060606;}
+.txt_1 span{font-size:18px;line-height:43px;color:#f40202;}
+
+
+.wz_2{width:600px;position:absolute;left:15px;top:0;}
+.txt_2{font-size:14px;line-height:28px;color:#060606;}
+.txt_2 span{font-size:20px;line-height:28px;color:#f40202;}
+
+.wz_3_1{width:151px;position:absolute;right:400px;top:26px;}
+.wz_3_2{width:151px;position:absolute;right:214px;top:16px;}
+.wz_3_3{width:151px;position:absolute;right:22px;top:0;}
+.txt_3{font-size:14px;line-height:26px;color:#060606;}
+
+
+.wz_4{width:459px;position:absolute;left:15px;top:0;}
+.txt_4{font-size:16px;line-height:32px;color:#060606;text-indent:2em;}
+
+.wz_5{width:454px;position:absolute;left:34px;top:0;}
+.txt_5{font-size:18px;line-height:28px;color:#060606;}
+
+
+.wz_6_1{width:180px;position:absolute;left:123px;top:0;}
+.wz_6_2{width:178px;position:absolute;left:422px;top:0;}
+.wz_6_3{width:178px;position:absolute;left:720px;top:0;}
+.txt_6_1{font-size:16px;line-height:26px;color:#060606;}
+.txt_6_2{font-size:14px;line-height:22px;color:#060606;}
+.txt_6_3{font-size:12px;line-height:22px;color:#060606;}
+.txt_6_4{font-size:13px;line-height:21px;color:#060606;}
+
+
+
+.wz_7_1{width:490px;position:absolute;left:237px;top:10px;}
+.wz_7_2{width:490px;position:absolute;right:50px;top:10px;}
+.wz_7_3{width:453px;position:absolute;left:253px;top:10px;}
+.wz_7_4{width:451px;position:absolute;right:55px;top:10px;}
+.wz_7_5{width:450px;position:absolute;left:239px;top:10px;}
+.wz_7_6{width:454px;position:absolute;right:91px;top:10px;}
+.wz_7_7{width:624px;position:absolute;left:221px;top:10px;}
+.wz_7_8{width:440px;position:absolute;right:63px;top:10px;}
+.txt_7{font-size:16px;line-height:28px;color:#fff;}
+
+
+
+.wz_8{width:391px;position:absolute;left:10px;top:0px;}
+.txt_8{font-size:16px;line-height:32px;color:#050505;}
+.txt_8 span{font-size:20px;line-height:32px;color:#b70005;}
+
+
+
+
+
+
+
+
+
+
+
+
