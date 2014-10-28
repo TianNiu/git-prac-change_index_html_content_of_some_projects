@@ -14,10 +14,10 @@ exports.main = function() {
     //项目存放文件夹:projects
     //var project_path = "./projects";
     //项目存放文件夹:project_collection2
-    var project_path = "./project_collection2";
+    var project_path = "./project_collection3";
     //console.log("run ");
-    /* 针对项目:91, 替换项目json数据*/
-    var arr_which_project = ThePlacementContent.project2_200;
+    /* 针对项目:liansuoA, 替换项目json数据*/
+    var arr_which_project = ThePlacementContent.project3_liansuoA;
     //console.log(arr_which_project);
     /* 需要替换的部分有几处,replace_time*/
     var replace_time = arr_which_project.length;

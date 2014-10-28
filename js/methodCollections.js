@@ -24,7 +24,7 @@ exports.findIndexFile = function(project_path, next) {
         //console.log(project_path.slice(2));
         //console.log(project_path);
         //console.log(file);
-        var file_regexp=new RegExp(project_path.slice(2)+"(\\\\|\\/)[0-9a-zA-Z-_\\.]*(\\\\|\\/)index\.html?$");
+        var file_regexp = new RegExp(project_path.slice(2) + "(\\\\|\\/)[0-9a-zA-Z-_\\.]*(\\\\|\\/)index\.html?$");
         //console.log(file_regexp);
         /* 文件匹配条件*/
         //var soso="project_collection2\zzhxcj\index.html";
@@ -74,5 +74,26 @@ exports.removeCharsetUtf8 = function(file_content) {
     file_content = file_content.replace("charset=utf-8", "");
     return file_content;
 };
-
-
+/**
+ * 将jiameng.html文件改名为index.html
+ * @param  {[type]}   project_path [description]
+ * @param  {Function} next         [description]
+ * @return {[type]}                [description]
+ */
+exports.renameToIndexUnderTheDir = function(project_path, next) {
+    console.log(project_path);
+    var finder = findit(project_path);
+    finder.on('file', function(file, stat) {
+        var file_regexp = new RegExp(project_path.slice(2) + "(\\\\|\\/)[0-9a-zA-Z-_\\.]*(\\\\|\\/)jiameng\.html?$");
+        if (file_regexp.test(file)) {
+            var path_arr = file.split(/[\\\/]/);
+            var new_index_path = file.replace("jiameng", "index");
+            //console.log(new_index_path);
+            //console.log(path_arr);
+            /* 将jiameng.html文件改名为index.html*/
+            fs.rename(file, new_index_path, function() {
+                next(new_index_path);
+            });
+        }
+    });
+};

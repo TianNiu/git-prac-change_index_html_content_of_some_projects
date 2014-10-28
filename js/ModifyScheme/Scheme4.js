@@ -14,10 +14,10 @@ exports.main = function() {
     //项目存放文件夹:projects
     //var project_path = "./projects";
     //项目存放文件夹:project_collection2
-    var project_path = "./project_collection2";
+    var project_path = "./project_collection4";
     //console.log("run ");
-    /* 针对项目:200, 替换项目json数据*/
-    var arr_which_project = ThePlacementContent.project2_200;
+    /* 针对项目:liansuoA, 替换项目json数据*/
+    var arr_which_project = ThePlacementContent.project4_liansuoB;
     //console.log(arr_which_project);
     /* 需要替换的部分有几处,replace_time*/
     var replace_time = arr_which_project.length;
@@ -51,6 +51,9 @@ exports.main = function() {
         }
         /* 去除meta信息*/
         file_content = MethodCollections.removeMetaInfo(file_content);
+        /* 特殊需求，删除指定内容*/
+        file_content = file_content.replace(/<!--.*include.*virtual.*web_header\.html?.*-->/i, "");
+
         /* 操作完成之后将内容重新写入文件*/
         fs.writeFile(filepath, file_content, "utf-8", function(err) {
             if (err) {

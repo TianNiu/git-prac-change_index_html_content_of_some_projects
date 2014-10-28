@@ -9,6 +9,9 @@ var path = require('path');
 //var MethodCollections = require('./js/methodCollections');
 var Scheme1 = require('./js/ModifyScheme/Scheme1');
 var Scheme2 = require('./js/ModifyScheme/Scheme2');
+var Scheme3 = require('./js/ModifyScheme/Scheme3');
+var Scheme4 = require('./js/ModifyScheme/Scheme4');
+var Scheme5 = require('./js/ModifyScheme/Scheme5');
 //Scheme1
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -28,9 +31,20 @@ app.post("/uploadfile", uploadhandler.main);*/
  * resourceful 路由方式 暂时禁用路由功能
  */
 //require('./router').main(app);
-//运行方案1,Scheme1
-Scheme1.main();
-Scheme2.main();
+//Scheme1: for 91
+//Scheme1.main();
+
+//Scheme2: for 200
+//Scheme2.main();
+
+//Scheme3: for liansuoA
+//Scheme3.main();
+
+//Scheme4: for liansuoB
+//Scheme4.main();
+
+//Scheme5: for liansuoC
+Scheme5.main();
 /**
  * node启动执行模块changeContent.main(),停用
  */

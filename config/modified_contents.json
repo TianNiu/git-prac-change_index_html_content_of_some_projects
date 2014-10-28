@@ -1,36 +1,107 @@
 {
     "project1_91": [{
         "description": "replace_the_nav",
+        "projects_dir":"projects",
         "replace_regexp_pattern": "<!--.*include.*virtual.*haibao_header\\.html.*-->",
         "replacement": "{#nav#}"
     }, {
         "description": "replace_the_source",
+        "projects_dir":"projects",
         "replace_regexp_pattern": "<\\/head>",
         "replacement": "{#source#}</head>"
     }, {
         "description": "replace_the_bottom",
+        "projects_dir":"projects",
         "replace_regexp_pattern": "<!--.*include.*virtual.*haibao_newfooter\\.html.*-->",
         "replacement": "{#bottom#}"
     }, {
         "description": "replace_the_guestbook",
+        "projects_dir":"projects",
         "replace_regexp_pattern": "<script>.*document\\.write.*decodeURI.*800\\.91jmw\\.com.*<\\/script>",
         "replacement": "{#guestbook#}"
     }],
     "project2_200": [{
         "description": "replace_the_nav",
+        "projects_dir":"project_collection2",
         "replace_regexp_pattern": "<!--.*include.*virtual.*recommend\\.php.*-->",
         "replacement": "{#nav#}"
     }, {
         "description": "replace_the_source",
+        "projects_dir":"project_collection2",
         "replace_regexp_pattern": "<!--.*include.*virtual.*assets\\.php.*-->",
         "replacement": "{#source#}"
     }, {
         "description": "replace_the_bottom",
+        "projects_dir":"project_collection2",
         "replace_regexp_pattern": "<!--.*include.*virtual.*beianhao\\.php.*-->",
         "replacement": "{#bottom#}"
     }, {
         "description": "replace_the_guestbook",
+        "projects_dir":"project_collection2",
         "replace_regexp_pattern": "<script>.*document\\.write.*decodeURI.*800\\.91jmw\\.com.*<\\/script>",
+        "replacement": "{#guestbook#}"
+    }],
+    "project3_liansuoA": [{
+        "description": "replace_the_nav",
+        "projects_dir":"project_collection3",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_88569\\.html?.*-->",
+        "replacement": "{#nav#}"
+    }, {
+        "description": "replace_the_source",
+        "projects_dir":"project_collection3",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_must\\.html?.*-->",
+        "replacement": "{#source#}"
+    }, {
+        "description": "replace_the_bottom",
+        "projects_dir":"project_collection3",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*footer_type3\\.html?.*-->",
+        "replacement": "{#bottom#}"
+    }, {
+        "description": "replace_the_guestbook",
+        "projects_dir":"project_collection3",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*gbook_88569\\.html?.*-->",
+        "replacement": "{#guestbook#}"
+    }],
+    "project4_liansuoB": [{
+        "description": "replace_the_nav",
+        "projects_dir":"project_collection4",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_136229\\.html?.*-->",        
+        "replacement": "{#nav#}"
+    }, {
+        "description": "replace_the_source",
+        "projects_dir":"project_collection4",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_must\\.html?.*-->",
+        "replacement": "{#source#}"
+    }, {
+        "description": "replace_the_bottom",
+        "projects_dir":"project_collection4",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*web_footer\\.html?.*-->",
+        "replacement": "{#bottom#}"
+    }, {
+        "description": "replace_the_guestbook",
+        "projects_dir":"project_collection4",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*gbook_136229\\.html?.*-->",
+        "replacement": "{#guestbook#}"
+    }],
+    "project5_liansuoC": [{
+        "description": "replace_the_nav",
+        "projects_dir":"project_collection5",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_136229\\.html?.*-->",        
+        "replacement": "{#nav#}"
+    }, {
+        "description": "replace_the_source",
+        "projects_dir":"project_collection5",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_must\\.html?.*-->",
+        "replacement": "{#source#}"
+    }, {
+        "description": "replace_the_bottom",
+        "projects_dir":"project_collection5",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*footer_type3\\.html?.*-->",
+        "replacement": "{#bottom#}"
+    }, {
+        "description": "replace_the_guestbook",
+        "projects_dir":"project_collection5",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*gbook_136229\\.html?.*-->",
         "replacement": "{#guestbook#}"
     }]
 }
