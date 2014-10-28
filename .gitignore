@@ -55,7 +55,8 @@ imgs/
 images-old/
 
 # pending files and test folder structure
-pending/
+pending/*
+!pending/*readme.md
 
 # projects folders for operation
 projects/
