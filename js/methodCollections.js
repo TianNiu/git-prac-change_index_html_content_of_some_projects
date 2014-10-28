@@ -1,82 +1,78 @@
-var ThePlacementContent = require('../config/modified_contents.json');
+/* requires firstly*/
+var findit = require('findit');
+var fs = require('fs-extra');
+var util = require('util');
+var cheerio = require('cheerio');
+
+/* custom requires below*/
+
 /**
- * 处理方法集合
+ * 找到项目文件夹中的index.html文件，交给下一步
+ * @param  {[type]}   project_path [description]
+ * @param  {Function} next         [description]
+ * @return {[type]}                [description]
+ */
+exports.findIndexFile = function(project_path, next) {
+    var finder = findit(project_path);
+    finder.on('file', function(file, stat) {
+        /* 匹配所有路径下的index.html 有效*/
+        // if (/(\\|\/)index.htm.?/gi.test(file)) {
+        //     //console.log(file);
+        //     next(file);
+        //     //console.log("");
+        // }
+        //console.log(project_path.slice(2));
+        //console.log(project_path);
+        //console.log(file);
+        var file_regexp=new RegExp(project_path.slice(2)+"(\\\\|\\/)[0-9a-zA-Z-_\\.]*(\\\\|\\/)index\.html?$");
+        //console.log(file_regexp);
+        /* 文件匹配条件*/
+        //var soso="project_collection2\zzhxcj\index.html";
+        if (file_regexp.test(file)) {
+            next(file);
+            //console.log("match");
+        }
+    });
+};
+/**
+ * 使用提供的目的字串替换正则匹配的内容
  * @return {[type]} [description]
  */
-module.exports = function() {
-    var _regexp = null;
-
-    function soChange(arr) {
-        arr.forEach(function(ele, index) {});
-    };
-
-    function loginfo() {
-        console.log(ThePlacementContent);
-    };
-    var methodsCollect = {
-        methodA: function() {
-            /* 使用页首替换*/
-            var the_head_html = getModifiedPartContent("modified_source");
-            //var source = html.match(/<!--.*include.*header.html.*-->/i)[0];
-            prev_html = prev_html.replace(/<\/head>/i, the_head_html + "</head>");
-
-            _regexp = new RegExp(pattern, i);
-
-            return this;
-        },
-        methodB: function() {
-            /* 使用页脚替换*/
-            var the_foot_html = getModifiedPartContent("modified_nav");
-            //debugger;
-            //var source = html.match(/<!--.*include.*footer.html.*-->/i)[0];
-            prev_html = prev_html.replace(/<!--.*include.*virtual.*haibao_header\.html.*-->/i, the_foot_html);
-            //$("body").append(the_foot_html);
-            //console.log("i am the 2");
-            //console.log(prev_html);
-            //console.log(source);
-            return this;
-        },
-        methodC: function() {
-            /* 加入留言板内容*/
-            var the_message_board = getModifiedPartContent("modified_bottom");
-
-            prev_html = prev_html.replace(/<!--.*include.*virtual.*haibao_newfooter\.html.*-->/i, the_message_board);
-            //console.log("i am the 3");
-            //console.log(prev_html);
-            return this;
-        },
-        methodD: function() {
-            /* 加入留言板内容*/
-            var the_message_board = getModifiedPartContent("modified_guestbook");
-
-            prev_html = prev_html.replace(/<script>.*document\.write.*decodeURI.*800\.91jmw\.com.*<\/script>/i, the_message_board);
-
-            return this;
-        },
-        methodE: function() {
-            /* 去除utf-8代码*/
-            prev_html = prev_html.replace("charset=utf-8", "");
-
-            return prev_html;
-        },
-        methodF: function() {
-            /* 去除meta信息*/
-            //prev_html = prev_html.replace("/<meta\s*name=\"Keywords\"\s*content.*>/i", "");
-            //prev_html = prev_html.replace("/<meta\s+name\s*=\s*\"\s*Description\s*\"\s+content.*>/i", "");
-            var $ = cheerio.load(prev_html, {
-                decodeEntities: false
-            });
-            $("meta[name=Keywords]").remove();
-            $("meta[name=Description]").remove();
-            //prev_html = prev_html.replace("/\"Description\"/i", "");
-            console.log("soso");
-            //return prev_html;
-            return $.html();
-        }
-    };
-    return function() {
-        console.log(ThePlacementContent);
-        //console.log("no");
-    };
-    //return methodsCollect;
+exports.replaceRegexpMatchWithStr = function(file_content, so_regexp_pattern, so_replacement) {
+    var the_replace_regexp = new RegExp(so_replacement, "i");
+    /* 如果replacement在文件内容中不存在*/
+    if (!the_replace_regexp.test(file_content)) {
+        /* create the regexp*/
+        var so_regexp = new RegExp(so_regexp_pattern, "i");
+        file_content = file_content.replace(so_regexp, so_replacement);
+    }
+    return file_content;
 };
+
+/**
+ * 去除meta信息
+ * @return {[type]} [description]
+ */
+exports.removeMetaInfo = function(file_content) {
+    /* 获取并转换*/
+    var $ = cheerio.load(file_content, {
+        decodeEntities: false
+    });
+    $("meta[name=Keywords]").remove();
+    $("meta[name=Description]").remove();
+    //prev_html = prev_html.replace("/\"Description\"/i", "");
+    //console.log("soso");
+    //return prev_html;
+    return $.html();
+};
+/**
+ * 去除meta中utf-8
+ * @param  {[type]} file_content [description]
+ * @return {[type]}              [description]
+ */
+exports.removeCharsetUtf8 = function(file_content) {
+    file_content = file_content.replace("charset=utf-8", "");
+    return file_content;
+};
+
+

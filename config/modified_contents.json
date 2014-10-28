@@ -15,5 +15,22 @@
         "description": "replace_the_guestbook",
         "replace_regexp_pattern": "<script>.*document\\.write.*decodeURI.*800\\.91jmw\\.com.*<\\/script>",
         "replacement": "{#guestbook#}"
+    }],
+    "project2_200": [{
+        "description": "replace_the_nav",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*recommend\\.php.*-->",
+        "replacement": "{#nav#}"
+    }, {
+        "description": "replace_the_source",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*assets\\.php.*-->",
+        "replacement": "{#source#}"
+    }, {
+        "description": "replace_the_bottom",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*beianhao\\.php.*-->",
+        "replacement": "{#bottom#}"
+    }, {
+        "description": "replace_the_guestbook",
+        "replace_regexp_pattern": "<script>.*document\\.write.*decodeURI.*800\\.91jmw\\.com.*<\\/script>",
+        "replacement": "{#guestbook#}"
     }]
 }

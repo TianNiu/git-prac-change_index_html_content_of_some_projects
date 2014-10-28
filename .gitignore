@@ -43,6 +43,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# simboo custom below...
 # node_modules
 node_modules/
 
@@ -52,3 +53,10 @@ image/
 img/
 imgs/
 images-old/
+
+# pending files and test folder structure
+pending/
+
+# projects folders for operation
+project_collection2/
+projects/
