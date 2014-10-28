@@ -54,9 +54,7 @@ img/
 imgs/
 images-old/
 
-# pending files and test folder structure
-pending/*
-!pending/*readme.md
+# pending files and test folder structure no use
 
 # projects folders for operation
 projects/
