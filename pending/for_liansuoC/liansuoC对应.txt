@@ -1,0 +1,34 @@
+##要求
+{#source#}: <!--#include virtual="/header_footer/header_must.html"-->
+
+{#nav#}: <!--#include virtual="/header_footer/yp/haibao_header/header_136229.html"-->
+{#guestbook#}: <!--#include virtual="/header_footer/gbook/gbook_136229.html"-->
+{#bottom#}: <!--#include virtual ="/header_footer/footer_type3.html"-->
+
+jiameng.html改名index.html
+
+##草稿
+
+{#guestbook#}: <!--#include virtual="/header_footer/gbook/gbook_136229.html"-->
+
+"project5_liansuoC": [{
+        "description": "replace_the_nav",
+        "projects_dir":"project_collection5",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_136229\\.html?.*-->",        
+        "replacement": "{#nav#}"
+    }, {
+        "description": "replace_the_source",
+        "projects_dir":"project_collection5",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_must\\.html?.*-->",
+        "replacement": "{#source#}"
+    }, {
+        "description": "replace_the_bottom",
+        "projects_dir":"project_collection5",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*footer_type3\\.html?.*-->",
+        "replacement": "{#bottom#}"
+    }, {
+        "description": "replace_the_guestbook",
+        "projects_dir":"project_collection5",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*gbook_136229\\.html?.*-->",
+        "replacement": "{#guestbook#}"
+    }]
