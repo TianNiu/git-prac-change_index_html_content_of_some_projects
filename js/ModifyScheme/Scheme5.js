@@ -10,11 +10,11 @@ var MethodCollections = require('../MethodCollections');
 /**
  * exports.main
  */
-exports.main = function() {
+exports.main = function(project_path) {
     //项目存放文件夹:projects
     //var project_path = "./projects";
     //项目存放文件夹:project_collection2
-    var project_path = "./project_collection5";
+    //var project_path = "./project_collection5";
     //console.log("run ");
     /* 针对项目:liansuoA, 替换项目json数据*/
     var arr_which_project = ThePlacementContent.project5_liansuoC;

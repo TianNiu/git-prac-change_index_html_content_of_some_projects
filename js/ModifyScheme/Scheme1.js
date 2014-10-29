@@ -10,9 +10,9 @@ var MethodCollections = require('../MethodCollections');
 /**
  * exports.main
  */
-exports.main = function() {
-    //项目存放文件夹:projects
-    var project_path = "./projects";
+exports.main = function(project_path) {
+    //项目存放文件夹:projects,变为传参
+    //var project_path = "./projects";
     //项目存放文件夹:project_collection2
     //var project_path = "./project_collection2";
     

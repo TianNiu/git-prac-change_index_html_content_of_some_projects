@@ -44,7 +44,7 @@
     "project3_liansuoA": [{
         "description": "replace_the_nav",
         "projects_dir":"project_collection3",
-        "replace_regexp_pattern": "<!--.*include.*virtual.*header_88569\\.html?.*-->",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_\\d+\\.html?.*-->",
         "replacement": "{#nav#}"
     }, {
         "description": "replace_the_source",
@@ -59,13 +59,13 @@
     }, {
         "description": "replace_the_guestbook",
         "projects_dir":"project_collection3",
-        "replace_regexp_pattern": "<!--.*include.*virtual.*gbook_88569\\.html?.*-->",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*gbook_\\d+\\.html?.*-->",
         "replacement": "{#guestbook#}"
     }],
     "project4_liansuoB": [{
         "description": "replace_the_nav",
         "projects_dir":"project_collection4",
-        "replace_regexp_pattern": "<!--.*include.*virtual.*header_136229\\.html?.*-->",        
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_\\d+\\.html?.*-->",        
         "replacement": "{#nav#}"
     }, {
         "description": "replace_the_source",
@@ -80,13 +80,13 @@
     }, {
         "description": "replace_the_guestbook",
         "projects_dir":"project_collection4",
-        "replace_regexp_pattern": "<!--.*include.*virtual.*gbook_136229\\.html?.*-->",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*gbook_\\d+\\.html?.*-->",
         "replacement": "{#guestbook#}"
     }],
     "project5_liansuoC": [{
         "description": "replace_the_nav",
         "projects_dir":"project_collection5",
-        "replace_regexp_pattern": "<!--.*include.*virtual.*header_136229\\.html?.*-->",        
+        "replace_regexp_pattern": "<!--.*include.*virtual.*header_\\d+\\.html?.*-->",        
         "replacement": "{#nav#}"
     }, {
         "description": "replace_the_source",
@@ -101,7 +101,7 @@
     }, {
         "description": "replace_the_guestbook",
         "projects_dir":"project_collection5",
-        "replace_regexp_pattern": "<!--.*include.*virtual.*gbook_136229\\.html?.*-->",
+        "replace_regexp_pattern": "<!--.*include.*virtual.*gbook_\\d+\\.html?.*-->",
         "replacement": "{#guestbook#}"
     }]
 }
